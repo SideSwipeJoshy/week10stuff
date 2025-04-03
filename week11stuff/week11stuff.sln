@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodeCanvas", "NodeCanvas.csproj", "{47E316FF-ACEE-9F27-959D-5D53E70DD7B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParadoxNotion", "ParadoxNotion.csproj", "{9C0C38F6-2E7F-94CF-2C8E-E96197E15D36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A69A8996-7234-D055-5B51-9129D16FC2F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47E316FF-ACEE-9F27-959D-5D53E70DD7B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E316FF-ACEE-9F27-959D-5D53E70DD7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E316FF-ACEE-9F27-959D-5D53E70DD7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E316FF-ACEE-9F27-959D-5D53E70DD7B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0C38F6-2E7F-94CF-2C8E-E96197E15D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0C38F6-2E7F-94CF-2C8E-E96197E15D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0C38F6-2E7F-94CF-2C8E-E96197E15D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0C38F6-2E7F-94CF-2C8E-E96197E15D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69A8996-7234-D055-5B51-9129D16FC2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69A8996-7234-D055-5B51-9129D16FC2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69A8996-7234-D055-5B51-9129D16FC2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69A8996-7234-D055-5B51-9129D16FC2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
