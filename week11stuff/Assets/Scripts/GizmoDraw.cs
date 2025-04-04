@@ -15,9 +15,14 @@ public class GizmoDraw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OnDrawGizmos();
+             }
+
+    private void OnDrawGizmos()
+    {
         Vector3 wallPos = wall.transform.position;
-        transform.position = wallPos;
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(wallPos, 2);
+        Gizmos.DrawSphere(wallPos, 1f);
+
     }
 }

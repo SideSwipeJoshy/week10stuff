@@ -12,7 +12,6 @@ namespace NodeCanvas.Tasks.Actions {
         //Return null if init was successfull. Return an error string otherwise
         public Transform[] patrolPoints;
         public BBParameter<Transform> currentTarget;
-        public GameObject shell;
         private int currentPatrolPointIndex = 0;
 
         //Use for initialization. This is called only once in the lifetime of the task.
@@ -27,10 +26,10 @@ namespace NodeCanvas.Tasks.Actions {
         //EndAction can be called from anywhere.
         protected override void OnExecute()
         {
+
             currentPatrolPointIndex++;
-            if (currentPatrolPointIndex >= patrolPoints.Length)
+           if (currentPatrolPointIndex >= patrolPoints.Length)
             {
-                GameObject.Instantiate(shell, currentTarget.value);
                 currentPatrolPointIndex = 0;
                 
             }
@@ -43,11 +42,12 @@ namespace NodeCanvas.Tasks.Actions {
         protected override void OnUpdate() {
 			if(currentPatrolPointIndex == 1)
             {
-                GameObject.Instantiate (shell, currentTarget.value);
+                Debug.Log("test");
+
             }
             if (currentPatrolPointIndex == 2)
             {
-                GameObject.Instantiate(shell,currentTarget.value);
+             
             }
                 
 		}

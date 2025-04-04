@@ -62,9 +62,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\FireTargetAT.cs" />
     <Compile Include="Assets\Scripts\GizmoDraw.cs" />
-    <Compile Include="Assets\Scripts\WallMoveAT.cs" />
+    <Compile Include="Assets\Scripts\WallSpawnAT.cs" />
+    <Compile Include="Assets\Scripts\wallMoveAT.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\TargetCheck.cs" />
+    <Compile Include="Assets\Scripts\ArtTrackAT.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

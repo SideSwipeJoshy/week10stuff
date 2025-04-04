@@ -9,7 +9,7 @@ namespace NodeCanvas.Tasks.Conditions
     public class TargetCheck : ConditionTask
     {
         public BBParameter<Transform> currentTarget;
-        public float rangeDistance;
+        public float radius;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -34,8 +34,8 @@ namespace NodeCanvas.Tasks.Conditions
         //Return whether the condition is success or failure.
         protected override bool OnCheck()
         {
-            float distanceToTarget = Vector3.Distance(currentTarget.value.position, agent.transform.position);
-            return distanceToTarget < rangeDistance;
+            float distanceToTarget = Vector3.Distance(agent.transform.position, currentTarget.value.position);
+            return distanceToTarget < radius;
         }
 
     }
