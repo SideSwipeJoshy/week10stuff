@@ -25,9 +25,9 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-        //    Vector3 offset = new Vector3 (0f, 0f, 5f);
-			//Vector3 newpos =artDetect.value.position - offset;
-			//newpos = agent.transform.position;
+            Vector3 offset = new Vector3 (5f, 0f, 5f);
+			Vector3 newpos =artDetect.value.position - offset;
+			newpos = agent.transform.position;
 
 			
 			GameObject.Instantiate(shell, artTarget.value);
