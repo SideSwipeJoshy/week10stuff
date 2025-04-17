@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -10,14 +12,22 @@ namespace NodeCanvas.Tasks.Actions {
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
-        public Transform[] patrolPoints;
-        public BBParameter<Transform> currentTarget;
-        private int currentPatrolPointIndex = 0;
+        float speed = 5f;
+        public GameObject shell;
+        public BBParameter<Transform> ArtDetect;
+        public BBParameter<Transform> ArtTarget;
+        public GameObject spawner;
+        private IEnumerator coroutine;
+        public Vector3 localTransform;
+        public Vector3 offset;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit()
         {
+            coroutine = spawn(2.0f);
+            StartCoroutine(coroutine);
+
             return null;
         }
 
@@ -27,33 +37,23 @@ namespace NodeCanvas.Tasks.Actions {
         protected override void OnExecute()
         {
 
-            currentPatrolPointIndex++;
-           if (currentPatrolPointIndex >= patrolPoints.Length)
-            {
-                currentPatrolPointIndex = 0;
-                
-            }
-            currentTarget.value = patrolPoints[currentPatrolPointIndex];
-            EndAction(true);
         }
 
 
         //Called once per frame while the action is active.
         protected override void OnUpdate() {
-			if(currentPatrolPointIndex == 1)
-            {
-                Debug.Log("test");
 
-            }
-            if (currentPatrolPointIndex == 2)
+        }
+        private IEnumerator spawn(float waitTime)
+        {
+            while (true)
             {
-             
+                yield return new WaitForSeconds(waitTime);
+                shell = GameObject.Instantiate(shell, spawner.transform.position, spawner.transform.rotation);
             }
-                
-		}
-
-		//Called when the task is disabled.
-		protected override void OnStop() {
+        }
+        //Called when the task is disabled.
+        protected override void OnStop() {
 			
 		}
 

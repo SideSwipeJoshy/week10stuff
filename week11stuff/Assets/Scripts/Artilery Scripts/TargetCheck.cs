@@ -35,7 +35,8 @@ namespace NodeCanvas.Tasks.Conditions
         protected override bool OnCheck()
         {
             float distanceToTarget = Vector3.Distance(agent.transform.position, currentTarget.value.position);
-            return distanceToTarget < radius;
+
+                return distanceToTarget < radius;
         }
 
     }
